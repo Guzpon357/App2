@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Views.AboutPage"
+             xmlns:vm="clr-namespace:App2.ViewModels"
+             Title="{Binding Title}">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="plainButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#eee"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="40"/>
+            </Style>
+            <Style x:Key="darkerButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#ddd"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="40"/>
+            </Style>
+            <Style x:Key="orangeButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#E8AD00"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BorderRadius" Value="0" />
+                <Setter Property="FontSize" Value="40" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+        <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label BackgroundColor="Black"
+               Text="0" 
+               Grid.Row="0"
+               HorizontalTextAlignment="End"
+               VerticalTextAlignment="End" TextColor="White"
+              FontSize="60" Grid.ColumnSpan="4"/>
+            <Button Text="+/-" Grid.Row="1" Grid.Column="1"
+                    Style="{StaticResource darkerButton}"/>
+            <Button Text="C" Grid.Row="1" Grid.Column="0"
+                    Style="{StaticResource darkerButton}"/>
+            <Button Text="%" Grid.Row="1" Grid.Column="2"
+                    Style="{StaticResource darkerButton}"/>
+            <Button Text="div" Grid.Row="1" Grid.Column="3"
+                    Style="{StaticResource orangeButton}"/>
+            <Button Text="7" Grid.Row="2" Grid.Column="0"
+                    Style="{StaticResource plainButton}"/>
+            <Button Text="8" Grid.Row="2" Grid.Column="1"
+                    Style="{StaticResource plainButton}"/>
+            <Button Text="9" Grid.Row="2" Grid.Column="2"
+                    Style="{StaticResource plainButton}"/>
+            <Button Text="X" Grid.Row="2" Grid.Column="3"
+                    Style="{StaticResource orangeButton}"/>
+            <Button Text="4" Grid.Row="3" Grid.Column="0"
+                    Style="{StaticResource plainButton}"/>
+            <Button Text="5" Grid.Row="3" Grid.Column="1"
+                    Style="{StaticResource plainButton}"/>
+            <Button Text="6" Grid.Row="3" Grid.Column="2"
+                    Style="{StaticResource plainButton}"/>
+            <Button Text="-" Grid.Row="3" Grid.Column="3"
+                    Style="{StaticResource orangeButton}"/>
+            <Button Text="1" Grid.Row="4" Grid.Column="0"
+                    Style="{StaticResource plainButton}"/>
+            <Button Text="2" Grid.Row="4" Grid.Column="1"
+                    Style="{StaticResource plainButton}"/>
+            <Button Text="3" Grid.Row="4" Grid.Column="2"
+                    Style="{StaticResource plainButton}"/>
+            <Button Text="+" Grid.Row="4" Grid.Column="3"
+                    Style="{StaticResource orangeButton}"/>
+            <Button Text="0" Grid.ColumnSpan="2" 
+                    Grid.Row="5" Grid.Column="0"
+                    Style="{StaticResource plainButton}"/>
+            <Button Text="." Grid.Row="5" Grid.Column="2"
+                    Style="{StaticResource plainButton}"/>
+            <Button Text="=" Grid.Row="5" Grid.Column="3"
+                    Style="{StaticResource orangeButton}"/>
+        </Grid>
+    </ContentPage.Content>
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Text="Ejemplo" BackgroundColor="LightSteelBlue"
+                Grid.Column="1"
+                Grid.Row="2">
+        </Button
+        <Button Text="Ejemplo" BackgroundColor="GreenYellow"
+                Grid.Column="0"
+                Grid.Row="2">
+        </Button
+        <Button Text="Ejemplo" BackgroundColor="MediumPurple"
+                Grid.Column="0"
+                Grid.Row="0">
+        </Button
+                
+    </Grid>-->
+    
+    <!--<RelativeLayout>
+        <Button x:Name="btnPrueba"
+                BackgroundColor="Green" Text="Mi primer botón"
+                RelativeLayout.HeightConstraint="{
+                ConstraintExpression Type=RelativeToParent,
+                Property=Height,
+                Factor=0.5}"
+                RelativeLayout.WidthConstraint="{
+                ConstraintExpression Type=RelativeToParent,
+                Property=Width,
+                Factor=0.5}">
+        </Button>
+
+        <Button x:Name="btnPrueba2"
+                BackgroundColor="Green" Text="Mi primer botón"
+                RelativeLayout.HeightConstraint="{
+                ConstraintExpression Type=RelativeToParent,
+                ElementName=btnPrueba,
+                Property=Height,
+                Factor=0.25}"
+                
+                RelativeLayout.YConstraint="{
+                ConstraintExpression Type=}"
+                
+                RelativeLayout.WidthConstraint="{
+                ConstraintExpression Type=RelativeToParent,
+                Property=Width,
+                Factor=0.5}">
+        </Button>
+
+    </RelativeLayout>-->
+    <!--
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="Start developing now" FontSize="Title"/>
+                <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
+                <Label FontSize="16" Padding="0,24,0,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Learn more at "/>
+                                <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button Margin="0,10,0,0" Text="Learn more"
+                        Command="{Binding OpenWebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+-->
+</ContentPage>
